@@ -1,0 +1,43 @@
+﻿<Window x:Class="BitServicesContractorSkills.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:BitServicesContractorSkills"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="650">
+    <Grid>
+        <ComboBox x:Name="cboSkillsList" HorizontalAlignment="Left" Margin="439,48,0,0" VerticalAlignment="Top" Width="179" Height="22" ItemsSource="{Binding}">
+            <ComboBox.ItemContainerStyle>
+                <Style TargetType="ComboBoxItem">
+                    <Setter Property="IsEnabled" Value="{Binding IsSelectable}" />
+                </Style>
+            </ComboBox.ItemContainerStyle>
+        </ComboBox>
+        <Button x:Name="btnAddSkill" Content="Add Skill" HorizontalAlignment="Left" Margin="539,92,0,0" VerticalAlignment="Top" Width="75" Height="20" Click="btnAddSkill_Click"/>
+        <ListBox x:Name="lstBxSkillsList" HorizontalAlignment="Left" Height="228" Margin="441,161,0,0" VerticalAlignment="Top" Width="179"/>
+        <Label x:Name="lblContracotorSkillsList" Content="Contractor Skills List" HorizontalAlignment="Left" Margin="457,122,0,0" VerticalAlignment="Top" Width="163" Height="26"/>
+        <Label x:Name="lblFirstName" Content="First Name:" HorizontalAlignment="Left" Margin="28,44,0,0" VerticalAlignment="Top" Width="105" Height="26"/>
+        <Label x:Name="lblLastName" Content="Last Name:" HorizontalAlignment="Left" Margin="28,72,0,0" VerticalAlignment="Top" Width="105" Height="26"/>
+        <Label x:Name="lblUserName" Content="Username:" HorizontalAlignment="Left" Margin="28,101,0,0" VerticalAlignment="Top" Width="105" Height="26"/>
+        <Label x:Name="lblPassword" Content="Password:" HorizontalAlignment="Left" Margin="28,129,0,0" VerticalAlignment="Top" Width="105" Height="26"/>
+        <Label x:Name="lblAddress" Content="Street Address:" HorizontalAlignment="Left" Margin="28,156,0,0" VerticalAlignment="Top" Width="105" Height="26"/>
+        <Label x:Name="lblSuburb" Content="Suburb:" HorizontalAlignment="Left" Margin="28,183,0,0" VerticalAlignment="Top" Width="105" Height="26"/>
+        <Label x:Name="lblPhone" Content="Phone:" HorizontalAlignment="Left" Margin="28,212,0,0" VerticalAlignment="Top" Width="105" Height="26"/>
+        <Label x:Name="label1_Copy6" Content="Email:" HorizontalAlignment="Left" Margin="28,237,0,0" VerticalAlignment="Top" Width="105" Height="26"/>
+        <Label x:Name="lblPostCode" Content="Post Code:" HorizontalAlignment="Left" Margin="28,263,0,0" VerticalAlignment="Top" Width="105" Height="26"/>
+        <Label x:Name="lblActive" Content="Active Status:" HorizontalAlignment="Left" Margin="28,291,0,0" VerticalAlignment="Top" Width="105" Height="26"/>
+        <TextBox x:Name="txtFirstName" HorizontalAlignment="Left" Height="23" Margin="138,47,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="239"/>
+        <TextBox x:Name="txtLastName" HorizontalAlignment="Left" Height="23" Margin="138,75,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="239"/>
+        <TextBox x:Name="txtUserName" HorizontalAlignment="Left" Height="23" Margin="138,103,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="239"/>
+        <TextBox x:Name="txtPassword" HorizontalAlignment="Left" Height="23" Margin="138,131,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="239"/>
+        <TextBox x:Name="txtStreetAddress" HorizontalAlignment="Left" Height="23" Margin="138,159,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="239"/>
+        <TextBox x:Name="txtSuburb" HorizontalAlignment="Left" Height="23" Margin="138,186,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="239"/>
+        <TextBox x:Name="txtPhone" HorizontalAlignment="Left" Height="23" Margin="138,213,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="239"/>
+        <TextBox x:Name="txtEmail" HorizontalAlignment="Left" Height="23" Margin="138,240,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="239"/>
+        <TextBox x:Name="txtPostCode" HorizontalAlignment="Left" Height="23" Margin="138,266,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="239"/>
+        <RadioButton x:Name="rbtnActive" Content="Active" HorizontalAlignment="Left" Margin="134,298,0,0" VerticalAlignment="Top" Height="15" Width="51"/>
+        <RadioButton x:Name="rbtnInActive" Content="Inactive" HorizontalAlignment="Left" Margin="201,299,0,0" VerticalAlignment="Top" Height="15" Width="60"/>
+        <Button x:Name="btnSave" Content="Save" HorizontalAlignment="Left" Margin="302,369,0,0" VerticalAlignment="Top" Width="75" Click="btnSave_Click"/>
+    </Grid>
+</Window>
